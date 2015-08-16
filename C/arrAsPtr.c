@@ -1,5 +1,5 @@
 //strlen & strcpy source code learning
-//@ 2015 Starx Inc , sylveryte 
+//@ 2015 Starx Inc , sylveryte  :)
 
 #include<stdio.h>
 
