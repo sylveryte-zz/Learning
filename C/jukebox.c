@@ -6,12 +6,60 @@ char tracks[][80]={"mai tenu samjhawa","tere naal","tere bin nahi lage","tujhse 
 
 int look(char* s,char* trk)
 {
-	/*test codes
+	char* first=s;
+
+	if(!*trk)
+		return 0;
+
+	
+	while(*s!=*trk&&*trk)                                   //gets first initial present in string
+		trk++;
+	
+	while(*s++)
+		trk++;
+	trk--;
+	s--;
+	s--;
+
+	if(*s==*trk)
+		return (int)trk;
+	else
+		return look(first,trk);	
+	
+	printf("\n\nSylveryte is Red Robin!!\n\n");
+	return 0;	
+}
+
+
+void search(char* toSearch)
+{
+	int i=0;
+	while(tracks[i++][0])
+		if(look(toSearch,tracks[i]))
+			printf("\nTrack:%s",tracks[i]);
+}
+
+main()
+{
+	char* toSearch;
+	int i=0;
+	printf("\nEnter word : ");
+	scanf("%79s",toSearch);
+	search(toSearch);
+	printf("\n");
+}
+
+
+//development 
+/*
+int look(char* s,char* trk)
+{
+	//test codes
 		//printf("\ns:%c,trk:%c,trk++:%c",*s,*trk,*trk++);
 		while(*trk)
 			printf("\ntrk:%c\n",*(trk++));
-		trk--;
-		*/
+	//	trk--;
+		
 	char* first=s;
 	
 	//printf("\ns=%s,trk=%s",s,trk);
@@ -70,10 +118,10 @@ main()
 	
 	
 	//test codes	
-	/*if(look("tere",tracks[1]))
+	if(look("tere",tracks[1]))
 		printf("\n\nholaaa!!\n\n");
 	else
 		printf("\n\n:/\n\n");
-	*/
 	
-}
+	
+}*/
