@@ -1,13 +1,13 @@
 #include<stdio.h>
 
-main(char * arg[])
+main(int argc,char * arg[])
 {
 	char s[80];
 	char* m=s;
 	int i;
-	FILE * rfile=fopen("in.txt","r");
-	FILE * file1=fopen("o1.txt","w");
-	FILE * file2=fopen("o2.txt","a");
+	FILE * rfile=fopen(arg[1],"r");
+	FILE * file1=fopen(arg[2],"w");
+	FILE * file2=fopen(arg[3],"a");
 	int c,d;
 	fscanf(rfile,"%i %i %[^\n]s",&c,&d,s);
 	while(*m)
