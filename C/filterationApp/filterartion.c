@@ -1,8 +1,9 @@
 //this is an awesome project thank you old me!! :)
-//Im feeling so smart right now // written look fx !! Yo!!!!!!!!!!
+//Im feeling so smart right now // wrote look fx !! Yo!!!!!!!!!!
 #include<stdio.h>
+#include<stdlib.h>
 
-char tracks[][80]={"mai tenu samjhawa","tere naal","tere bin nahi lage","tujhse dur jo hota","phir suna","lag jaa gale","tere dar pe aaya","bin tere"};
+char tracks[100][80]={};
 
 int look(char* s,char* trk)
 {
@@ -31,22 +32,34 @@ int look(char* s,char* trk)
 }
 
 
-void search(char* toSearch)
+void search(FILE* out,char* toSearch)
 {
 	int i=0;
 	while(tracks[i++][0])
 		if(look(toSearch,tracks[i]))
-			printf("\nTrack:%s",tracks[i]);
+			fprintf(out,"%s\n",tracks[i]);
 }
 
 main()
 {
-	char* toSearch;
+	FILE* in=fopen("in.txt","r");
+	FILE* out=fopen("out.txt","w"); 
+	int l;
+	char toSearch[80];
 	int i=0;
+	
+	while((fscanf(in,"\n%[^\n]s",&tracks[i++]))>0)
+		;
+	//l=fscanf(in,"%[^\n]s",&tracks[0]);
 	printf("\nEnter word : ");
-	scanf("%79s",toSearch);
-	search(toSearch);
-	printf("\n");
+	scanf("%79s",&toSearch);
+	//printf("%s\n",toSearch);
+	search(out,toSearch);
+	fclose(in);
+	fclose(out);
+	printf("\nSucess!!\n press any key to open output text file!!\n");
+	getch();
+	system("out.txt");
 }
 
 

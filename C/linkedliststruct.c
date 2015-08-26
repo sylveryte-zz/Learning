@@ -30,11 +30,11 @@ void show(linkedlist* m)
 								break;
 							}
 			case weight :	{
-								printf("ItemW : %i\n",m->data.weight);
+								printf("ItemW : %f\n",m->data.weight);
 								break;
 							}
 			case volume :	{
-								printf("ItemV : %i\n",m->data.volume);
+								printf("ItemV : %f\n",m->data.volume);
 								break;
 							}
 		}
