@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AndroidL</string>
+
+    <string name="hello_world">Hello Sylveryte</string>
+    <string name="action_settings">Settings</string>
+    <string name="btname">Show Text</string>
+    <string name="bt2name">Show Image</string>
+    <string name="btHide">Hide</string>
+    <string name="Redname">Red Robin aka Sylveryte</string>
+
+    <string name="desc">Hello\nWhats up??\nbefor evladjslfdsa Blah!! blah!!\tthis is tabbed\nthis is new line
+                        \nNew line bro\nhello\nwtopsdi\ndsaflkh\fsdhdf\gdf\n\sf\d\gs\dfnsf\hb\gsfdgn\nfgkjsfhgksjd\nhjsfjadf\njdfyewig\nsdjghfiwe\ndmgbdfkjg\ndkjhsdyf\nksgdfwe</string>
+    <string name="title_activity_tabbed">tabbed</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+</resources>
