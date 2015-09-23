@@ -1,5 +1,5 @@
 import javax.sound.midi.*;
-class soundTest
+class soundq
 {	
 	void play()
 	{
@@ -11,7 +11,7 @@ class soundTest
 			Track track=seq.createTrack();
 			
 			for(int i=0,k=0;i<120;i++,k=i%9)
-			{if(i%3==0)
+			{if(i%2==0)
 				{
 				ShortMessage a=new ShortMessage();
 				a.setMessage(144,3,i,100);
@@ -39,7 +39,7 @@ class SoundTest
 {
 	public static void main(String[] args)
 	{
-		soundTest s=new soundTest();
+		soundq s=new soundq();
 		s.play();
 	}
 }
