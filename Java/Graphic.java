@@ -1,14 +1,27 @@
 import javax.swing.*;
-class Graphic
+import java.awt.event.*;
+class Graphic implements ActionListener
 {
-	public static void main(String[] args)
+	JFrame f=new JFrame();
+	JButton b=new JButton("yoho");
+	void go()
 	{
-		JFrame f=new JFrame();
-		JButton b=new JButton("yoho");
+		b.addActionListener(this);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.getContentPane().add(b);
 		f.setSize(200,200);
 		f.setVisible(true);
-		
 	}
+		
+	public static void main(String[] args)
+	{
+		Graphic g=new Graphic();
+		g.go();
+	}
+
+	public void actionPerformed(ActionEvent av)
+	{
+		b.setText("yolo");
+	}
+	
 }

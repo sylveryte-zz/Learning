@@ -1,6 +1,4 @@
 //template
-
-
 import java.util.*;
 import java.net.*;
 
@@ -22,8 +20,6 @@ class test
 		StringBuffer s=new StringBuffer(9);
 		//s.setCharAt(0,'r');
 		System.out.println(s);
-		
-		
 		
 		System.out.println("Date : "+d);
 		System.out.println("Ip address : "+ip);
