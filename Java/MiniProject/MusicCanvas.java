@@ -7,8 +7,8 @@ class MusicCanvas
 	JFrame frame;
 	myCanvas canvas;
 	SoundEngine se;
-	Toolkit tr=Toolkit.getDefaultToolkit();
-	Dimension dim=tr.getScreenSize();
+	// Toolkit tr=Toolkit.getDefaultToolkit();
+	Dimension dim=new Dimension(1000,600);
 	Thread t=Thread.currentThread();
 	// static  int i=60;
 
@@ -37,10 +37,10 @@ class MusicCanvas
 			{
 				int i=e.getKeyCode();
 					// short c=0;
-				
+				boolean mu=false;
 				
 				// canvas.paintWildBox();				
-				frame.repaint();
+				
 
 				try
 				{
@@ -61,56 +61,60 @@ class MusicCanvas
 					// case 57 : if(se.setInst(1)){System.out.println("Instrument 9 selected");} break;
 					
 
-					case KeyEvent.VK_Q : se.playOff(0,48); break;
-					case KeyEvent.VK_W : se.playOff(0,49); break;
-					case KeyEvent.VK_E : se.playOff(0,50); break;
-					case KeyEvent.VK_R : se.playOff(0,51); break;
-					case KeyEvent.VK_T : se.playOff(0,52); break;
-					case KeyEvent.VK_Y : se.playOff(0,53); break;
-					case KeyEvent.VK_U : se.playOff(0,54); break;
-					case KeyEvent.VK_I : se.playOff(0,55); break;
-					case KeyEvent.VK_O : se.playOff(0,56); break;
-					case KeyEvent.VK_P : se.playOff(0,57); break;
-					case 91 : se.playOff(0,58); break; //[
-					case 93 : se.playOff(0,59); break;//]
+					case KeyEvent.VK_Q : se.playOff(0,48);mu=true; break;
+					case KeyEvent.VK_W : se.playOff(0,49);mu=true; break;
+					case KeyEvent.VK_E : se.playOff(0,50);mu=true; break;
+					case KeyEvent.VK_R : se.playOff(0,51);mu=true; break;
+					case KeyEvent.VK_T : se.playOff(0,52);mu=true; break;
+					case KeyEvent.VK_Y : se.playOff(0,53);mu=true; break;
+					case KeyEvent.VK_U : se.playOff(0,54);mu=true; break;
+					case KeyEvent.VK_I : se.playOff(0,55);mu=true; break;
+					case KeyEvent.VK_O : se.playOff(0,56);mu=true; break;
+					case KeyEvent.VK_P : se.playOff(0,57);mu=true; break;
+					case 91 : se.playOff(0,58);mu=true; break; //[
+					case 93 : se.playOff(0,59);mu=true; break;//]
 
 
 
 
-					case KeyEvent.VK_A : se.playOff(0,60); break;
-					case KeyEvent.VK_S : se.playOff(0,61); break;
-					case KeyEvent.VK_D : se.playOff(0,62); break;
-					case KeyEvent.VK_F : se.playOff(0,63); break;
-					case KeyEvent.VK_G : se.playOff(0,64); break;
-					case KeyEvent.VK_H : se.playOff(0,65); break;
-					case KeyEvent.VK_J : se.playOff(0,66); break;
-					case KeyEvent.VK_K : se.playOff(0,67); break;
-					case KeyEvent.VK_L : se.playOff(0,68); break;
-					case 59 : se.playOff(0,69); break; //;
-					case 222 : se.playOff(0,70); break;//''
-					case 10 : se.playOff(0,71); break;//enter key
+					case KeyEvent.VK_A : se.playOff(0,60);mu=true; break;
+					case KeyEvent.VK_S : se.playOff(0,61);mu=true; break;
+					case KeyEvent.VK_D : se.playOff(0,62);mu=true; break;
+					case KeyEvent.VK_F : se.playOff(0,63);mu=true; break;
+					case KeyEvent.VK_G : se.playOff(0,64);mu=true; break;
+					case KeyEvent.VK_H : se.playOff(0,65);mu=true; break;
+					case KeyEvent.VK_J : se.playOff(0,66);mu=true; break;
+					case KeyEvent.VK_K : se.playOff(0,67);mu=true; break;
+					case KeyEvent.VK_L : se.playOff(0,68);mu=true; break;
+					case 59 : se.playOff(0,69);mu=true; break; //;
+					case 222 : se.playOff(0,70);mu=true; break;//''
+					case 10 : se.playOff(0,71);mu=true; break;//enter key
 
 
 
-					case KeyEvent.VK_Z : se.playOff(0,72); break;
-					case KeyEvent.VK_X : se.playOff(0,73); break;
-					case KeyEvent.VK_C : se.playOff(0,74); break;
-					case KeyEvent.VK_V : se.playOff(0,75); break;
-					case KeyEvent.VK_B : se.playOff(0,76); break;
-					case KeyEvent.VK_N : se.playOff(0,77); break;
-					case KeyEvent.VK_M : se.playOff(0,78); break;
-					case 44 : se.playOff(0,79); break; //,
-					case 46 : se.playOff(0,80); break;//.
-					case 47 : se.playOff(0,81); break; ///
-					case 16 : se.playOff(0,82); break;//SHIFT
+					case KeyEvent.VK_Z : se.playOff(0,72);mu=true; break;
+					case KeyEvent.VK_X : se.playOff(0,73);mu=true; break;
+					case KeyEvent.VK_C : se.playOff(0,74);mu=true; break;
+					case KeyEvent.VK_V : se.playOff(0,75);mu=true; break;
+					case KeyEvent.VK_B : se.playOff(0,76);mu=true; break;
+					case KeyEvent.VK_N : se.playOff(0,77);mu=true; break;
+					case KeyEvent.VK_M : se.playOff(0,78);mu=true; break;
+					case 44 : se.playOff(0,79);mu=true; break; //,
+					case 46 : se.playOff(0,80);mu=true; break;//.
+					case 47 : se.playOff(0,81);mu=true; break; ///
+					case 16 : se.playOff(0,82);mu=true; break;//SHIFT
 					// case 10 : se.playOff(0,71); break;//enter key
 
 
 
-					default : System.out.print("\nWrong Key" + i); break;
+					default : break;
 				}
 				 
-				
+			if(mu)
+			{
+				frame.repaint();
+			}
+			mu=false;
 				
 			}
 			public void keyPressed(KeyEvent e)
@@ -165,7 +169,7 @@ class MusicCanvas
 
 
 
-					default : System.out.print("\nWrong Key" + i); break;
+					default :  break;
 				}
 			}
 		};
